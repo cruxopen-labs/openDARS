@@ -1,0 +1,4835 @@
+{
+  "target": "fpga",
+  "method": "nsga2",
+  "seed": 7,
+  "search_size": 128,
+  "position": 250,
+  "prefill_tokens": 20,
+  "objectives": [
+    "mean of six baseline-normalized latencies",
+    "area",
+    "power_w"
+  ],
+  "evaluated": 82,
+  "feasible": 61,
+  "pareto": [
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8114668715846994,
+      "power_w": 4.279772282324002,
+      "ppa": {
+        "lut": 95039,
+        "ff": 53055.49126349158,
+        "dsp": 727.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8114668715846994,
+        "power_w": 4.279772282324002,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3351012666903117,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 184.3634204003893,
+        "qwen3.5/prefill": 1879.822506346877,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 2793.0692960401025
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.835373975409836,
+      "power_w": 4.324916172012543,
+      "ppa": {
+        "lut": 97839,
+        "ff": 54618.59036531059,
+        "dsp": 775.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.835373975409836,
+        "power_w": 4.324916172012543,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.2374759807763691,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1746.4929868055945,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 2658.552028827846
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8848958333333333,
+      "power_w": 4.3862310778244264,
+      "ppa": {
+        "lut": 103639,
+        "ff": 57856.438504792815,
+        "dsp": 823.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8848958333333333,
+        "power_w": 4.3862310778244264,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.173197797124793,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 161.36014246492164,
+        "qwen3.5/prefill": 1515.23317891859,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 2454.9471780400127
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8715761612021858,
+      "power_w": 4.397856110311459,
+      "ppa": {
+        "lut": 102079,
+        "ff": 56985.56900520794,
+        "dsp": 855.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8715761612021858,
+        "power_w": 4.397856110311459,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0412381472661416,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 143.94514462332396,
+        "qwen3.5/prefill": 1732.1523389743722,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 2426.8734453155075
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8954832650273225,
+      "power_w": 4.443,
+      "ppa": {
+        "lut": 104879,
+        "ff": 58548.66810702695,
+        "dsp": 903.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8954832650273225,
+        "power_w": 4.443,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9436128613521987,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 132.50728946827223,
+        "qwen3.5/prefill": 1598.82281943309,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 2283.328980092713
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9450051229508196,
+      "power_w": 4.504314905811883,
+      "ppa": {
+        "lut": 110679,
+        "ff": 61786.51624650917,
+        "dsp": 951.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.9450051229508196,
+        "power_w": 4.504314905811883,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.8793346777006231,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1367.5630115460856,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 2067.0481695121453
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9969176912568306,
+      "power_w": 4.618534492838807,
+      "ppa": {
+        "lut": 116759,
+        "ff": 65180.674296173296,
+        "dsp": 951.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9969176912568306,
+        "power_w": 4.618534492838807,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.8598572193134313,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1161.263967155361,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 1960.6641205485134
+    }
+  ],
+  "points": [
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8114668715846994,
+      "power_w": 4.279772282324002,
+      "ppa": {
+        "lut": 95039,
+        "ff": 53055.49126349158,
+        "dsp": 727.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8114668715846994,
+        "power_w": 4.279772282324002,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 2.3400625499533736,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 1989.601547769674,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 3568.500397288349,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 2865.607003307352
+      },
+      "energy_mj_mean": 6365.981335850989
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8114668715846994,
+      "power_w": 4.279772282324002,
+      "ppa": {
+        "lut": 95039,
+        "ff": 53055.49126349158,
+        "dsp": 727.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8114668715846994,
+        "power_w": 4.279772282324002,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.4212887225801794,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 774.9053002110754,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 2100.957840001011,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 1003.7189227783401
+      },
+      "energy_mj_mean": 3124.6766206191555
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8114668715846994,
+      "power_w": 4.279772282324002,
+      "ppa": {
+        "lut": 95039,
+        "ff": 53055.49126349158,
+        "dsp": 727.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8114668715846994,
+        "power_w": 4.279772282324002,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3485576310075977,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 1966.4631450544125,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 2857.959681751191
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8114668715846994,
+      "power_w": 4.279772282324002,
+      "ppa": {
+        "lut": 95039,
+        "ff": 53055.49126349158,
+        "dsp": 727.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8114668715846994,
+        "power_w": 4.279772282324002,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3351012666903117,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 184.3634204003893,
+        "qwen3.5/prefill": 1879.822506346877,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 2793.0692960401025
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.948078893442623,
+      "power_w": 4.380825642536056,
+      "ppa": {
+        "lut": 111039,
+        "ff": 61987.48613102876,
+        "dsp": 743.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 0.948078893442623,
+        "power_w": 4.380825642536056,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 2.3400625499533736,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 1989.601547769674,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 3568.500397288349,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 2865.607003307352
+      },
+      "energy_mj_mean": 6516.2939605884985
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.948078893442623,
+      "power_w": 4.380825642536056,
+      "ppa": {
+        "lut": 111039,
+        "ff": 61987.48613102876,
+        "dsp": 743.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 0.948078893442623,
+        "power_w": 4.380825642536056,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.4212887225801794,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 774.9053002110754,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 2100.957840001011,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 1003.7189227783401
+      },
+      "energy_mj_mean": 3198.4560301904867
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.948078893442623,
+      "power_w": 4.380825642536056,
+      "ppa": {
+        "lut": 111039,
+        "ff": 61987.48613102876,
+        "dsp": 743.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 0.948078893442623,
+        "power_w": 4.380825642536056,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3351012666903117,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 184.3634204003893,
+        "qwen3.5/prefill": 1879.822506346877,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 2859.018841728712
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8633794398907104,
+      "power_w": 4.393991869350924,
+      "ppa": {
+        "lut": 101119,
+        "ff": 56449.64931315571,
+        "dsp": 727.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.8633794398907104,
+        "power_w": 4.393991869350924,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.4212887225801794,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 774.9053002110754,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 2100.957840001011,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 1003.7189227783401
+      },
+      "energy_mj_mean": 3208.0687381563057
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8633794398907104,
+      "power_w": 4.393991869350924,
+      "ppa": {
+        "lut": 101119,
+        "ff": 56449.64931315571,
+        "dsp": 727.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.8633794398907104,
+        "power_w": 4.393991869350924,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3229564637870947,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 184.3634204003893,
+        "qwen3.5/prefill": 1751.1886166759878,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 2773.408687039756
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9999914617486338,
+      "power_w": 4.495045229562979,
+      "ppa": {
+        "lut": 117119,
+        "ff": 65381.644180692885,
+        "dsp": 743.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 0.9999914617486338,
+        "power_w": 4.495045229562979,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3485576310075977,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 1966.4631450544125,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 3001.7153218168487
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.835373975409836,
+      "power_w": 4.324916172012543,
+      "ppa": {
+        "lut": 97839,
+        "ff": 54618.59036531059,
+        "dsp": 775.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.835373975409836,
+        "power_w": 4.324916172012543,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 2.2424372640394306,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 1953.493813449768,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 3435.170877747067,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 2852.081227959914
+      },
+      "energy_mj_mean": 6269.1518558273765
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.835373975409836,
+      "power_w": 4.324916172012543,
+      "ppa": {
+        "lut": 97839,
+        "ff": 54618.59036531059,
+        "dsp": 775.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.835373975409836,
+        "power_w": 4.324916172012543,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3236634366662368,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 738.797565891169,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1967.628320459729,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 990.1931474309022
+      },
+      "energy_mj_mean": 2993.65721345486
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.835373975409836,
+      "power_w": 4.324916172012543,
+      "ppa": {
+        "lut": 97839,
+        "ff": 54618.59036531059,
+        "dsp": 775.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.835373975409836,
+        "power_w": 4.324916172012543,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.250932345093655,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1833.13362551313,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 2724.1268912402966
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.835373975409836,
+      "power_w": 4.324916172012543,
+      "ppa": {
+        "lut": 97839,
+        "ff": 54618.59036531059,
+        "dsp": 775.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.835373975409836,
+        "power_w": 4.324916172012543,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.2374759807763691,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1746.4929868055945,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 2658.552028827846
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9719859972677596,
+      "power_w": 4.425969532224597,
+      "ppa": {
+        "lut": 113839,
+        "ff": 63550.58523284776,
+        "dsp": 791.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 0.9719859972677596,
+        "power_w": 4.425969532224597,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.250932345093655,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1833.13362551313,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 2787.7771829581475
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9719859972677596,
+      "power_w": 4.425969532224597,
+      "ppa": {
+        "lut": 113839,
+        "ff": 63550.58523284776,
+        "dsp": 791.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 0.9719859972677596,
+        "power_w": 4.425969532224597,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.2374759807763691,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1746.4929868055945,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 2720.6701382030415
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.887286543715847,
+      "power_w": 4.439135759039465,
+      "ppa": {
+        "lut": 103919,
+        "ff": 58012.74841497472,
+        "dsp": 775.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.887286543715847,
+        "power_w": 4.439135759039465,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 2.2424372640394306,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 1953.493813449768,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 3435.170877747067,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 2852.081227959914
+      },
+      "energy_mj_mean": 6434.718055841944
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.887286543715847,
+      "power_w": 4.439135759039465,
+      "ppa": {
+        "lut": 103919,
+        "ff": 58012.74841497472,
+        "dsp": 775.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.887286543715847,
+        "power_w": 4.439135759039465,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3236634366662368,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 738.797565891169,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1967.628320459729,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 990.1931474309022
+      },
+      "energy_mj_mean": 3072.7186974285178
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.887286543715847,
+      "power_w": 4.439135759039465,
+      "ppa": {
+        "lut": 103919,
+        "ff": 58012.74841497472,
+        "dsp": 775.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.887286543715847,
+        "power_w": 4.439135759039465,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.250932345093655,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1833.13362551313,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 2796.070169711197
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.887286543715847,
+      "power_w": 4.439135759039465,
+      "ppa": {
+        "lut": 103919,
+        "ff": 58012.74841497472,
+        "dsp": 775.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.887286543715847,
+        "power_w": 4.439135759039465,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.218665625959009,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1547.2596912528404,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 2581.3595560402337
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": false,
+      "area": 1.0238985655737705,
+      "power_w": 4.54018911925152,
+      "ppa": {
+        "lut": 119919,
+        "ff": 66944.74328251189,
+        "dsp": 791.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.0238985655737705,
+        "power_w": 4.54018911925152,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0238985655737705,
+      "power_w": 4.54018911925152,
+      "ppa": {
+        "lut": 119919,
+        "ff": 66944.74328251189,
+        "dsp": 791.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.0238985655737705,
+        "power_w": 4.54018911925152,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0238985655737705,
+      "power_w": 4.54018911925152,
+      "ppa": {
+        "lut": 119919,
+        "ff": 66944.74328251189,
+        "dsp": 791.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.0238985655737705,
+        "power_w": 4.54018911925152,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8609887295081967,
+      "power_w": 4.3410871881358855,
+      "ppa": {
+        "lut": 100839,
+        "ff": 56293.33940297381,
+        "dsp": 775.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8609887295081967,
+        "power_w": 4.3410871881358855,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 2.269024927748434,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 1954.2743705676446,
+        "qwen3.5/decode": 174.96401358766175,
+        "qwen3.5/prefill": 3293.8716223262636,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 2817.7433717130107
+      },
+      "energy_mj_mean": 6185.3526285131
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8609887295081967,
+      "power_w": 4.3410871881358855,
+      "ppa": {
+        "lut": 100839,
+        "ff": 56293.33940297381,
+        "dsp": 775.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8609887295081967,
+        "power_w": 4.3410871881358855,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.277551265197379,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 657.1014617564306,
+        "qwen3.5/decode": 174.96401358766175,
+        "qwen3.5/prefill": 1691.88301781364,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 799.0078784896651
+      },
+      "energy_mj_mean": 2627.1826805641326
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8609887295081967,
+      "power_w": 4.3410871881358855,
+      "ppa": {
+        "lut": 100839,
+        "ff": 56293.33940297381,
+        "dsp": 775.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8609887295081967,
+        "power_w": 4.3410871881358855,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.2708230830387361,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 657.1014617564306,
+        "qwen3.5/decode": 172.7979976199734,
+        "qwen3.5/prefill": 1648.5626984598723,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 799.0078784896651
+      },
+      "energy_mj_mean": 2594.2726559809284
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9976007513661203,
+      "power_w": 4.442140548347939,
+      "ppa": {
+        "lut": 116839,
+        "ff": 65225.33427051098,
+        "dsp": 791.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 0.9976007513661203,
+        "power_w": 4.442140548347939,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.2708230830387361,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 657.1014617564306,
+        "qwen3.5/decode": 172.7979976199734,
+        "qwen3.5/prefill": 1648.5626984598723,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 799.0078784896651
+      },
+      "energy_mj_mean": 2654.6630507902287
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9129012978142077,
+      "power_w": 4.455306775162808,
+      "ppa": {
+        "lut": 106919,
+        "ff": 59687.49745263794,
+        "dsp": 775.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9129012978142077,
+        "power_w": 4.455306775162808,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.3502757764763356,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 739.6165291048193,
+        "qwen3.5/decode": 174.96401358766175,
+        "qwen3.5/prefill": 1826.367471134699,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 955.8984980417437
+      },
+      "energy_mj_mean": 2973.939781546425
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9129012978142077,
+      "power_w": 4.455306775162808,
+      "ppa": {
+        "lut": 106919,
+        "ff": 59687.49745263794,
+        "dsp": 775.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9129012978142077,
+        "power_w": 4.455306775162808,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.277551265197379,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 657.1014617564306,
+        "qwen3.5/decode": 174.96401358766175,
+        "qwen3.5/prefill": 1691.88301781364,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 799.0078784896651
+      },
+      "energy_mj_mean": 2696.307235730502
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9129012978142077,
+      "power_w": 4.455306775162808,
+      "ppa": {
+        "lut": 106919,
+        "ff": 59687.49745263794,
+        "dsp": 775.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9129012978142077,
+        "power_w": 4.455306775162808,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.2580111765656874,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 657.1014617564306,
+        "qwen3.5/decode": 172.7979976199734,
+        "qwen3.5/prefill": 1512.863059951013,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 799.0078784896651
+      },
+      "energy_mj_mean": 2561.767386268723
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": false,
+      "area": 1.0495133196721311,
+      "power_w": 4.556360135374861,
+      "ppa": {
+        "lut": 122919,
+        "ff": 68619.49232017511,
+        "dsp": 791.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.0495133196721311,
+        "power_w": 4.556360135374861,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8848958333333333,
+      "power_w": 4.3862310778244264,
+      "ppa": {
+        "lut": 103639,
+        "ff": 57856.438504792815,
+        "dsp": 823.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8848958333333333,
+        "power_w": 4.3862310778244264,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.2526504905623927,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 703.5087947849129,
+        "qwen3.5/decode": 163.52615843261003,
+        "qwen3.5/prefill": 1693.0379515934167,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 942.3727226943056
+      },
+      "energy_mj_mean": 2761.5275330958634
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8848958333333333,
+      "power_w": 4.3862310778244264,
+      "ppa": {
+        "lut": 103639,
+        "ff": 57856.438504792815,
+        "dsp": 823.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8848958333333333,
+        "power_w": 4.3862310778244264,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.1799259792834362,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 163.52615843261003,
+        "qwen3.5/prefill": 1558.5534982723575,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 2488.199440973898
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8848958333333333,
+      "power_w": 4.3862310778244264,
+      "ppa": {
+        "lut": 103639,
+        "ff": 57856.438504792815,
+        "dsp": 823.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8848958333333333,
+        "power_w": 4.3862310778244264,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.173197797124793,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 161.36014246492164,
+        "qwen3.5/prefill": 1515.23317891859,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 2454.9471780400127
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0215078551912569,
+      "power_w": 4.487284438036481,
+      "ppa": {
+        "lut": 119639,
+        "ff": 66788.43337233,
+        "dsp": 839.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0215078551912569,
+        "power_w": 4.487284438036481,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9368084016393443,
+      "power_w": 4.500450664851349,
+      "ppa": {
+        "lut": 109719,
+        "ff": 61250.59655445694,
+        "dsp": 823.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9368084016393443,
+        "power_w": 4.500450664851349,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 2.171399641834491,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 1918.166636247738,
+        "qwen3.5/decode": 163.52615843261003,
+        "qwen3.5/prefill": 3160.5421027849816,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 2804.2175963655727
+      },
+      "energy_mj_mean": 6241.785504707731
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9368084016393443,
+      "power_w": 4.500450664851349,
+      "ppa": {
+        "lut": 109719,
+        "ff": 61250.59655445694,
+        "dsp": 823.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9368084016393443,
+        "power_w": 4.500450664851349,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.2526504905623927,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 703.5087947849129,
+        "qwen3.5/decode": 163.52615843261003,
+        "qwen3.5/prefill": 1693.0379515934167,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 942.3727226943056
+      },
+      "energy_mj_mean": 2833.439050933664
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9368084016393443,
+      "power_w": 4.500450664851349,
+      "ppa": {
+        "lut": 109719,
+        "ff": 61250.59655445694,
+        "dsp": 823.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9368084016393443,
+        "power_w": 4.500450664851349,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.1799259792834362,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 163.52615843261003,
+        "qwen3.5/prefill": 1558.5534982723575,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 2552.9933625767753
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9368084016393443,
+      "power_w": 4.500450664851349,
+      "ppa": {
+        "lut": 109719,
+        "ff": 61250.59655445694,
+        "dsp": 823.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9368084016393443,
+        "power_w": 4.500450664851349,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.1537203387376014,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 161.36014246492164,
+        "qwen3.5/prefill": 1308.9341345278656,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 2364.135415989187
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0734204234972677,
+      "power_w": 4.601504025063403,
+      "ppa": {
+        "lut": 125719,
+        "ff": 70182.59142199412,
+        "dsp": 839.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.0734204234972677,
+        "power_w": 4.601504025063403,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8715761612021858,
+      "power_w": 4.397856110311459,
+      "ppa": {
+        "lut": 102079,
+        "ff": 56985.56900520794,
+        "dsp": 855.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8715761612021858,
+        "power_w": 4.397856110311459,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.6346830851992198,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 1348.895437896741,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 2760.134881747043,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 1791.3123311435213
+      },
+      "energy_mj_mean": 4599.580734581287
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8715761612021858,
+      "power_w": 4.397856110311459,
+      "ppa": {
+        "lut": 102079,
+        "ff": 56985.56900520794,
+        "dsp": 855.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8715761612021858,
+        "power_w": 4.397856110311459,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.097625285913943,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 614.498475504008,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1898.6098441924123,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 734.8592337916518
+      },
+      "energy_mj_mean": 2655.453396498723
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8715761612021858,
+      "power_w": 4.397856110311459,
+      "ppa": {
+        "lut": 102079,
+        "ff": 56985.56900520794,
+        "dsp": 855.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8715761612021858,
+        "power_w": 4.397856110311459,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0546945115834274,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1818.7929776819078,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 2493.5542312252214
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8715761612021858,
+      "power_w": 4.397856110311459,
+      "ppa": {
+        "lut": 102079,
+        "ff": 56985.56900520794,
+        "dsp": 855.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8715761612021858,
+        "power_w": 4.397856110311459,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0412381472661416,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 143.94514462332396,
+        "qwen3.5/prefill": 1732.1523389743722,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 2426.8734453155075
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": false,
+      "area": 1.0081881830601094,
+      "power_w": 4.498909470523513,
+      "ppa": {
+        "lut": 118079,
+        "ff": 65917.56387274512,
+        "dsp": 871.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0081881830601094,
+        "power_w": 4.498909470523513,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": false,
+      "area": 1.0081881830601094,
+      "power_w": 4.498909470523513,
+      "ppa": {
+        "lut": 118079,
+        "ff": 65917.56387274512,
+        "dsp": 871.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0081881830601094,
+        "power_w": 4.498909470523513,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0081881830601094,
+      "power_w": 4.498909470523513,
+      "ppa": {
+        "lut": 118079,
+        "ff": 65917.56387274512,
+        "dsp": 871.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0081881830601094,
+        "power_w": 4.498909470523513,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0081881830601094,
+      "power_w": 4.498909470523513,
+      "ppa": {
+        "lut": 118079,
+        "ff": 65917.56387274512,
+        "dsp": 871.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0081881830601094,
+        "power_w": 4.498909470523513,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9234887295081967,
+      "power_w": 4.512075697338381,
+      "ppa": {
+        "lut": 108159,
+        "ff": 60379.72705487206,
+        "dsp": 855.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9234887295081967,
+        "power_w": 4.512075697338381,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.097625285913943,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 614.498475504008,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1898.6098441924123,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 734.8592337916518
+      },
+      "energy_mj_mean": 2724.4199071597195
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9234887295081967,
+      "power_w": 4.512075697338381,
+      "ppa": {
+        "lut": 108159,
+        "ff": 60379.72705487206,
+        "dsp": 855.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9234887295081967,
+        "power_w": 4.512075697338381,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0546945115834274,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1818.7929776819078,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 2558.315953158777
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9234887295081967,
+      "power_w": 4.512075697338381,
+      "ppa": {
+        "lut": 108159,
+        "ff": 60379.72705487206,
+        "dsp": 855.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9234887295081967,
+        "power_w": 4.512075697338381,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0290933443629247,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 143.94514462332396,
+        "qwen3.5/prefill": 1603.5184493034833,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 2393.1690491974477
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": false,
+      "area": 1.0601007513661203,
+      "power_w": 4.613129057550435,
+      "ppa": {
+        "lut": 124159,
+        "ff": 69311.72192240924,
+        "dsp": 871.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.0601007513661203,
+        "power_w": 4.613129057550435,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8954832650273225,
+      "power_w": 4.443,
+      "ppa": {
+        "lut": 104879,
+        "ff": 58548.66810702695,
+        "dsp": 903.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8954832650273225,
+        "power_w": 4.443,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.537057799285277,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 1312.7877035768347,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 2626.805362205761,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 1777.7865557960831
+      },
+      "energy_mj_mean": 4478.339058656698
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.8954832650273225,
+      "power_w": 4.443,
+      "ppa": {
+        "lut": 104879,
+        "ff": 58548.66810702695,
+        "dsp": 903.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8954832650273225,
+        "power_w": 4.443,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 578.3907411841017,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1765.2803246511298,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 721.3334584442139
+      },
+      "energy_mj_mean": 2514.255299106616
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8954832650273225,
+      "power_w": 4.443,
+      "ppa": {
+        "lut": 104879,
+        "ff": 58548.66810702695,
+        "dsp": 903.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8954832650273225,
+        "power_w": 4.443,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9570692256694846,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1685.4634581406256,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 2350.6942427037893
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.8954832650273225,
+      "power_w": 4.443,
+      "ppa": {
+        "lut": 104879,
+        "ff": 58548.66810702695,
+        "dsp": 903.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.8954832650273225,
+        "power_w": 4.443,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9436128613521987,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 132.50728946827223,
+        "qwen3.5/prefill": 1598.82281943309,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 2283.328980092713
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": false,
+      "area": 1.032095286885246,
+      "power_w": 4.544053360212054,
+      "ppa": {
+        "lut": 120879,
+        "ff": 67480.66297456411,
+        "dsp": 919.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.032095286885246,
+        "power_w": 4.544053360212054,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.032095286885246,
+      "power_w": 4.544053360212054,
+      "ppa": {
+        "lut": 120879,
+        "ff": 67480.66297456411,
+        "dsp": 919.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.032095286885246,
+        "power_w": 4.544053360212054,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9473958333333333,
+      "power_w": 4.557219587026923,
+      "ppa": {
+        "lut": 110959,
+        "ff": 61942.82615669107,
+        "dsp": 903.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9473958333333333,
+        "power_w": 4.557219587026923,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 578.3907411841017,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1765.2803246511298,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 721.3334584442139
+      },
+      "energy_mj_mean": 2578.8911762041203
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9473958333333333,
+      "power_w": 4.557219587026923,
+      "ppa": {
+        "lut": 110959,
+        "ff": 61942.82615669107,
+        "dsp": 903.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9473958333333333,
+        "power_w": 4.557219587026923,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9570692256694846,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1685.4634581406256,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 2411.125331073853
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9473958333333333,
+      "power_w": 4.557219587026923,
+      "ppa": {
+        "lut": 110959,
+        "ff": 61942.82615669107,
+        "dsp": 903.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9473958333333333,
+        "power_w": 4.557219587026923,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9248025065348386,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 132.50728946827223,
+        "qwen3.5/prefill": 1399.589523880336,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 2190.7032788373594
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0840078551912569,
+      "power_w": 4.658272947238976,
+      "ppa": {
+        "lut": 126959,
+        "ff": 70874.82102422824,
+        "dsp": 919.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.0840078551912569,
+        "power_w": 4.658272947238976,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.921098019125683,
+      "power_w": 4.459171016123342,
+      "ppa": {
+        "lut": 107879,
+        "ff": 60223.41714469017,
+        "dsp": 903.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.921098019125683,
+        "power_w": 4.459171016123342,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0266123398100986,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 579.2097043977519,
+        "qwen3.5/decode": 134.54573781059645,
+        "qwen3.5/prefill": 1624.0194753261,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 687.0388090550554
+      },
+      "energy_mj_mean": 2413.3386474110225
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.921098019125683,
+      "power_w": 4.459171016123342,
+      "ppa": {
+        "lut": 107879,
+        "ff": 60223.41714469017,
+        "dsp": 903.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.921098019125683,
+        "power_w": 4.459171016123342,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9769599636145658,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 530.1499169347876,
+        "qwen3.5/decode": 132.37972184290805,
+        "qwen3.5/prefill": 1500.8925310873676,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 595.0580145951166
+      },
+      "energy_mj_mean": 2215.400845463598
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0577100409836067,
+      "power_w": 4.5602243763353965,
+      "ppa": {
+        "lut": 123879,
+        "ff": 69155.41201222733,
+        "dsp": 919.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0577100409836067,
+        "power_w": 4.5602243763353965,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.973010587431694,
+      "power_w": 4.573390603150265,
+      "ppa": {
+        "lut": 113959,
+        "ff": 63617.57519435429,
+        "dsp": 903.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.973010587431694,
+        "power_w": 4.573390603150265,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.5636454629942804,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 1313.5682606947112,
+        "qwen3.5/decode": 134.54573781059645,
+        "qwen3.5/prefill": 2485.506106784958,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 1743.4486995491798
+      },
+      "energy_mj_mean": 4496.788267273803
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.973010587431694,
+      "power_w": 4.573390603150265,
+      "ppa": {
+        "lut": 113959,
+        "ff": 63617.57519435429,
+        "dsp": 903.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.973010587431694,
+        "power_w": 4.573390603150265,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.0266123398100986,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 579.2097043977519,
+        "qwen3.5/decode": 134.54573781059645,
+        "qwen3.5/prefill": 1624.0194753261,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 687.0388090550554
+      },
+      "energy_mj_mean": 2475.155191936162
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.973010587431694,
+      "power_w": 4.573390603150265,
+      "ppa": {
+        "lut": 113959,
+        "ff": 63617.57519435429,
+        "dsp": 903.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.973010587431694,
+        "power_w": 4.573390603150265,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9641480571415171,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 530.1499169347876,
+        "qwen3.5/decode": 132.37972184290805,
+        "qwen3.5/prefill": 1365.1928925785082,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 595.0580145951166
+      },
+      "energy_mj_mean": 2168.7127301886153
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.1096226092896175,
+      "power_w": 4.674443963362318,
+      "ppa": {
+        "lut": 129959,
+        "ff": 72549.57006189147,
+        "dsp": 919.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.1096226092896175,
+        "power_w": 4.674443963362318,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9450051229508196,
+      "power_w": 4.504314905811883,
+      "ppa": {
+        "lut": 110679,
+        "ff": 61786.51624650917,
+        "dsp": 951.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.9450051229508196,
+        "power_w": 4.504314905811883,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.4660201770803374,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 1277.4605263748049,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 2352.1765872436754,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 1729.9229242017416
+      },
+      "energy_mj_mean": 4258.088540630022
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9450051229508196,
+      "power_w": 4.504314905811883,
+      "ppa": {
+        "lut": 110679,
+        "ff": 61786.51624650917,
+        "dsp": 951.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.9450051229508196,
+        "power_w": 4.504314905811883,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9289870538961559,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 543.1019700778455,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1490.689955784818,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 673.5130337076174
+      },
+      "energy_mj_mean": 2266.989860133944
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9450051229508196,
+      "power_w": 4.504314905811883,
+      "ppa": {
+        "lut": 110679,
+        "ff": 61786.51624650917,
+        "dsp": 951.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.9450051229508196,
+        "power_w": 4.504314905811883,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.886062859859266,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1410.883330899853,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 2101.195632545344
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9450051229508196,
+      "power_w": 4.504314905811883,
+      "ppa": {
+        "lut": 110679,
+        "ff": 61786.51624650917,
+        "dsp": 951.0,
+        "bram": 118,
+        "uram": 0,
+        "area": 0.9450051229508196,
+        "power_w": 4.504314905811883,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.8793346777006231,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1367.5630115460856,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 2067.0481695121453
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": false,
+      "area": 1.0816171448087433,
+      "power_w": 4.6053682660239375,
+      "ppa": {
+        "lut": 126679,
+        "ff": 70718.51111404634,
+        "dsp": 967.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0816171448087433,
+        "power_w": 4.6053682660239375,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0816171448087433,
+      "power_w": 4.6053682660239375,
+      "ppa": {
+        "lut": 126679,
+        "ff": 70718.51111404634,
+        "dsp": 967.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0816171448087433,
+        "power_w": 4.6053682660239375,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.0816171448087433,
+      "power_w": 4.6053682660239375,
+      "ppa": {
+        "lut": 126679,
+        "ff": 70718.51111404634,
+        "dsp": 967.0,
+        "bram": 119,
+        "uram": 0,
+        "area": 1.0816171448087433,
+        "power_w": 4.6053682660239375,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9969176912568306,
+      "power_w": 4.618534492838807,
+      "ppa": {
+        "lut": 116759,
+        "ff": 65180.674296173296,
+        "dsp": 951.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9969176912568306,
+        "power_w": 4.618534492838807,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1.4660201770803374,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 1277.4605263748049,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 2352.1765872436754,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 1729.9229242017416
+      },
+      "energy_mj_mean": 4366.06436487963
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 0.9969176912568306,
+      "power_w": 4.618534492838807,
+      "ppa": {
+        "lut": 116759,
+        "ff": 65180.674296173296,
+        "dsp": 951.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9969176912568306,
+        "power_w": 4.618534492838807,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.9289870538961559,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 543.1019700778455,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1490.689955784818,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 673.5130337076174
+      },
+      "energy_mj_mean": 2324.4757710955914
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9969176912568306,
+      "power_w": 4.618534492838807,
+      "ppa": {
+        "lut": 116759,
+        "ff": 65180.674296173296,
+        "dsp": 951.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9969176912568306,
+        "power_w": 4.618534492838807,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.886062859859266,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1410.883330899853,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 2154.4773640473836
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 0.9969176912568306,
+      "power_w": 4.618534492838807,
+      "ppa": {
+        "lut": 116759,
+        "ff": 65180.674296173296,
+        "dsp": 951.0,
+        "bram": 135,
+        "uram": 0,
+        "area": 0.9969176912568306,
+        "power_w": 4.618534492838807,
+        "feasible": true,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 0.8598572193134313,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1161.263967155361,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 1960.6641205485134
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": false,
+      "area": 1.1335297131147541,
+      "power_w": 4.71958785305086,
+      "ppa": {
+        "lut": 132759,
+        "ff": 74112.66916371047,
+        "dsp": 967.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.1335297131147541,
+        "power_w": 4.71958785305086,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": false,
+      "area": 1.1335297131147541,
+      "power_w": 4.71958785305086,
+      "ppa": {
+        "lut": 132759,
+        "ff": 74112.66916371047,
+        "dsp": 967.0,
+        "bram": 136,
+        "uram": 0,
+        "area": 1.1335297131147541,
+        "power_w": 4.71958785305086,
+        "feasible": false,
+        "status": "baseline-anchored resource estimate; slopes and timing unvalidated"
+      },
+      "latency_ratio": 1000000.0,
+      "latencies_ms": {}
+    }
+  ]
+}

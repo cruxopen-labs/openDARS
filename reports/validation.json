@@ -1,0 +1,664 @@
+[
+  {
+    "model": "qwen3",
+    "label": "prefill 5 tokens",
+    "dataset": "qwen3_profile.json",
+    "train": true,
+    "measured_cycles": 17907131,
+    "predicted_cycles": 17935415.089939453,
+    "error_pct": 0.15794875203321013,
+    "class_error_pct": {
+      "overhead": -0.007605978832780913,
+      "gemv": 0.2699088639622982,
+      "elt": 0.15768610777442404,
+      "fdot_nt": -1.0843010013706578,
+      "fdot_nn": -0.3617718188547503,
+      "rope": -1.3789039083092591,
+      "quant": 0.006561928236914483,
+      "norm": 0.008706173800887562,
+      "softmax": 1.6750961759227856
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=0",
+    "dataset": "qwen3_profile.json",
+    "train": true,
+    "measured_cycles": 6509716,
+    "predicted_cycles": 6524670.867558822,
+    "error_pct": 0.22973148995781845,
+    "class_error_pct": {
+      "overhead": 0.15592069150172083,
+      "gemv": -0.0633202358697682,
+      "elt": 1.4498880649627344,
+      "fdot_nt": 4.960608266198019,
+      "fdot_nn": 0.20107845659766976,
+      "rope": 0.6644334691892517,
+      "quant": 0.0443977663151518,
+      "norm": 0.11107126111049581,
+      "softmax": 5.862719887856893
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=4",
+    "dataset": "qwen3_profile.json",
+    "train": true,
+    "measured_cycles": 6514908,
+    "predicted_cycles": 6524670.867558822,
+    "error_pct": 0.14985426592089013,
+    "class_error_pct": {
+      "overhead": -0.014608584456909934,
+      "gemv": -0.06363440941291598,
+      "elt": 0.9860990269109138,
+      "fdot_nt": 5.11307286661753,
+      "fdot_nn": 0.7547030602467419,
+      "rope": -4.117525869581584,
+      "quant": -0.091128133353513,
+      "norm": 0.208409299389678,
+      "softmax": 5.631161175077293
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=8",
+    "dataset": "qwen3_profile.json",
+    "train": false,
+    "measured_cycles": 6966592,
+    "predicted_cycles": 6524670.867558822,
+    "error_pct": -6.343433524471909,
+    "class_error_pct": {
+      "overhead": -1.6980164457251812,
+      "gemv": -8.062126874922326,
+      "elt": 0.5950037801661701,
+      "fdot_nt": 4.13380549941178,
+      "fdot_nn": -0.261835062590432,
+      "rope": -0.13986427279402136,
+      "quant": -0.23446706263250405,
+      "norm": -0.3767179423871836,
+      "softmax": 5.438075704397516
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=16",
+    "dataset": "qwen3_profile.json",
+    "train": true,
+    "measured_cycles": 6710423,
+    "predicted_cycles": 6721009.119185578,
+    "error_pct": 0.15775636179087282,
+    "class_error_pct": {
+      "overhead": -0.224667432549841,
+      "gemv": -0.10355764036155124,
+      "elt": 1.3683183162611856,
+      "fdot_nt": 2.7854420309622707,
+      "fdot_nn": -0.0019213325225586608,
+      "rope": 0.6199399654511328,
+      "quant": 0.1745191440600813,
+      "norm": 0.21590468153271924,
+      "softmax": 5.399777578470366
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=64",
+    "dataset": "qwen3_profile.json",
+    "train": true,
+    "measured_cycles": 7325240,
+    "predicted_cycles": 7310023.874065847,
+    "error_pct": -0.20772187579045642,
+    "class_error_pct": {
+      "overhead": 0.15987298392918792,
+      "gemv": -0.17090724441334304,
+      "elt": -1.4560572741459499,
+      "fdot_nt": -0.08754668963488754,
+      "fdot_nn": -1.4017243404647939,
+      "rope": 0.6220578118212083,
+      "quant": 0.06990124748182946,
+      "norm": -0.33704996887163885,
+      "softmax": 1.020537790578535
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=128",
+    "dataset": "qwen3_profile.json",
+    "train": true,
+    "measured_cycles": 8120623,
+    "predicted_cycles": 8095376.880572872,
+    "error_pct": -0.31088894814015333,
+    "class_error_pct": {
+      "overhead": 0.11970587330396576,
+      "gemv": -0.06300606035125611,
+      "elt": 1.5106532028426045,
+      "fdot_nt": -1.1266131574809268,
+      "fdot_nn": -1.9786669190029915,
+      "rope": 0.5426995387509903,
+      "quant": 0.011509250731656095,
+      "norm": 0.27237652536891144,
+      "softmax": 0.7864427159942844
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=192",
+    "dataset": "qwen3_profile.json",
+    "train": true,
+    "measured_cycles": 8918014,
+    "predicted_cycles": 8880729.887079896,
+    "error_pct": -0.41807641163271736,
+    "class_error_pct": {
+      "overhead": -0.040203514597958456,
+      "gemv": -0.03876932083650697,
+      "elt": -1.0760447492091596,
+      "fdot_nt": -1.580121210503449,
+      "fdot_nn": -1.3207049111888636,
+      "rope": 0.6771531272000697,
+      "quant": -0.09522924707714431,
+      "norm": -0.2654806104228302,
+      "softmax": 0.6314122114594367
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=250",
+    "dataset": "qwen3_profile.json",
+    "train": true,
+    "measured_cycles": 9518597,
+    "predicted_cycles": 9469744.641960166,
+    "error_pct": -0.5132306582559809,
+    "class_error_pct": {
+      "overhead": -0.08873225061520884,
+      "gemv": -0.061494063039713165,
+      "elt": -3.1110783178641355,
+      "fdot_nt": -1.768047298409825,
+      "fdot_nn": -1.1523869550819632,
+      "rope": 0.43497295465306784,
+      "quant": -0.13048493146265994,
+      "norm": -0.09969166210925806,
+      "softmax": 0.567630253713669
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "prefill 20 tokens",
+    "dataset": "qwen3_prefill20.json",
+    "train": true,
+    "measured_cycles": 57723511,
+    "predicted_cycles": 57839074.11841017,
+    "error_pct": 0.20020112499770093,
+    "class_error_pct": {
+      "overhead": -0.054460987207671785,
+      "gemv": 0.5194135750419493,
+      "elt": -0.03717830886601492,
+      "fdot_nt": -3.2000523035975004,
+      "fdot_nn": 0.40306259770330755,
+      "rope": -0.4136861082841614,
+      "quant": 0.0077405495803040125,
+      "norm": -0.11366491212285723,
+      "softmax": 0.2729728532464115
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "prefill 5 tokens",
+    "dataset": "qwen3_baseline.json",
+    "train": false,
+    "measured_cycles": 17900875,
+    "predicted_cycles": 17935415.089939453,
+    "error_pct": 0.19295196430035855,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=16",
+    "dataset": "qwen3_baseline.json",
+    "train": false,
+    "measured_cycles": 6704749,
+    "predicted_cycles": 6721009.119185578,
+    "error_pct": 0.24251644894652813,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=64",
+    "dataset": "qwen3_baseline.json",
+    "train": false,
+    "measured_cycles": 7317710,
+    "predicted_cycles": 7310023.874065847,
+    "error_pct": -0.10503457959051277,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=128",
+    "dataset": "qwen3_baseline.json",
+    "train": false,
+    "measured_cycles": 8115410,
+    "predicted_cycles": 8095376.880572872,
+    "error_pct": -0.24685283216902,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=192",
+    "dataset": "qwen3_baseline.json",
+    "train": false,
+    "measured_cycles": 8917576,
+    "predicted_cycles": 8880729.887079896,
+    "error_pct": -0.4131852974407324,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=250",
+    "dataset": "qwen3_baseline.json",
+    "train": false,
+    "measured_cycles": 9513263,
+    "predicted_cycles": 9469744.641960166,
+    "error_pct": -0.4574493319467132,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=16",
+    "dataset": "qwen3_repeat.json",
+    "train": false,
+    "measured_cycles": 6714983,
+    "predicted_cycles": 6721009.119185578,
+    "error_pct": 0.08974139153559157,
+    "class_error_pct": {
+      "overhead": 0.05809118284785253,
+      "gemv": -0.20416618265299835,
+      "elt": 1.6064311470121329,
+      "fdot_nt": 2.700072750893323,
+      "fdot_nn": -0.13568968286294947,
+      "rope": 0.3980611273094681,
+      "quant": 0.0164411495037875,
+      "norm": 0.22340118503787476,
+      "softmax": 5.35458943879612
+    }
+  },
+  {
+    "model": "qwen3",
+    "label": "decode t=250",
+    "dataset": "qwen3_repeat.json",
+    "train": false,
+    "measured_cycles": 9570729,
+    "predicted_cycles": 9469744.641960166,
+    "error_pct": -1.0551375766656212,
+    "class_error_pct": {
+      "overhead": -0.4715865800603236,
+      "gemv": -0.9915452897357735,
+      "elt": -3.125604937554849,
+      "fdot_nt": -1.8290483575814198,
+      "fdot_nn": -1.2303593924347433,
+      "rope": 0.22546364494757665,
+      "quant": -0.049277532822933345,
+      "norm": -0.24844593686491612,
+      "softmax": 0.5745685752677865
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "prefill 5 tokens",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 48704319,
+    "predicted_cycles": 48402477.53855572,
+    "error_pct": -0.619742699706527,
+    "class_error_pct": {
+      "overhead": -0.25986051075813643,
+      "gemv": -0.4282552970430564,
+      "elt": -0.5022289893396148,
+      "fdot_nt": -6.638942983049601,
+      "fdot_nn": -2.7164626529659675,
+      "rope": 1.0029350266622439,
+      "quant": -0.000931414004068376,
+      "norm": 0.03884153810529423,
+      "softmax": -1.5447279474726794,
+      "act": -0.01690469910816672
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=0",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 13134442,
+    "predicted_cycles": 13126595.657929668,
+    "error_pct": -0.059738678432874615,
+    "class_error_pct": {
+      "overhead": 0.053921381116639466,
+      "gemv": 0.08094275598897749,
+      "elt": 0.17062513428356407,
+      "fdot_nt": -4.155806370728898,
+      "fdot_nn": -2.6748586145427966,
+      "rope": 0.2188349918140764,
+      "quant": -0.02440406834518516,
+      "norm": -0.01115858954113813,
+      "softmax": -4.134641509913772,
+      "act": -0.040275872161410486
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=4",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 13137519,
+    "predicted_cycles": 13126595.657929668,
+    "error_pct": -0.08314615621359822,
+    "class_error_pct": {
+      "overhead": 0.05192850719764053,
+      "gemv": 0.046523623566607775,
+      "elt": 0.155230876349588,
+      "fdot_nt": -4.374594281249122,
+      "fdot_nn": -2.6837952792616693,
+      "rope": -0.7074464023006377,
+      "quant": 0.08420799698098946,
+      "norm": -0.010803854393215406,
+      "softmax": -4.55958268574742,
+      "act": -0.02751196717872828
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=8",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 13133375,
+    "predicted_cycles": 13126595.657929668,
+    "error_pct": -0.051619192098995015,
+    "class_error_pct": {
+      "overhead": 0.012394040383445493,
+      "gemv": 0.11313246292474766,
+      "elt": 0.14860483256846635,
+      "fdot_nt": -3.8219337937604902,
+      "fdot_nn": -2.66473717420056,
+      "rope": 0.5477408560147667,
+      "quant": -0.012649148188614845,
+      "norm": 0.02113261941463218,
+      "softmax": -4.498131565713925,
+      "act": 0.02916720947205853
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=16",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 13163948,
+    "predicted_cycles": 13163751.42342535,
+    "error_pct": -0.0014932949799706385,
+    "class_error_pct": {
+      "overhead": 0.0999328446949388,
+      "gemv": 0.10238461717473335,
+      "elt": 0.14707425724092005,
+      "fdot_nt": -0.24720130108638605,
+      "fdot_nn": -1.7871701325515965,
+      "rope": 0.12179424139837636,
+      "quant": -0.012649148188614845,
+      "norm": -0.07142700196411944,
+      "softmax": -4.114442759490422,
+      "act": 0.0004204423843523486
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=64",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 13258147,
+    "predicted_cycles": 13275218.719912397,
+    "error_pct": 0.12876399629899726,
+    "class_error_pct": {
+      "overhead": 0.16027193024790165,
+      "gemv": 0.08091148354310018,
+      "elt": 0.12294766994667139,
+      "fdot_nt": 3.0940521921796194,
+      "fdot_nn": 0.3768638253330181,
+      "rope": -0.3365946960923627,
+      "quant": 0.034398187819761894,
+      "norm": -0.037047458649308584,
+      "softmax": -2.803891159501448,
+      "act": 0.030764736697319606
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=128",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 13377228,
+    "predicted_cycles": 13423841.781895125,
+    "error_pct": 0.3484562115194878,
+    "class_error_pct": {
+      "overhead": -0.01501655859901252,
+      "gemv": 0.06218279976630825,
+      "elt": 0.13931726611000617,
+      "fdot_nt": 4.561319285913168,
+      "fdot_nn": 3.581419228308036,
+      "rope": -0.4085884875471457,
+      "quant": -0.0957784240443349,
+      "norm": -0.0232180871288179,
+      "softmax": -1.8920150955529125,
+      "act": -0.033096576677005274
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=192",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 13491253,
+    "predicted_cycles": 13572464.843877854,
+    "error_pct": 0.6019592389072681,
+    "class_error_pct": {
+      "overhead": 0.04916927436704466,
+      "gemv": 0.11787351264425094,
+      "elt": 0.15447596634896588,
+      "fdot_nt": 5.00414751001923,
+      "fdot_nn": 6.268907753063235,
+      "rope": -0.4924498950519163,
+      "quant": -0.08584633036416989,
+      "norm": -0.04413796006554893,
+      "softmax": -0.5896751050075699,
+      "act": -0.0003778430688772261
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=250",
+    "dataset": "qwen35_profile.json",
+    "train": true,
+    "measured_cycles": 13583099,
+    "predicted_cycles": 13683932.1403649,
+    "error_pct": 0.7423426742667605,
+    "class_error_pct": {
+      "overhead": 0.060053798845172146,
+      "gemv": 0.0625735604528943,
+      "elt": 0.1578102380525026,
+      "fdot_nt": 5.272080544353042,
+      "fdot_nn": 8.023892883460704,
+      "rope": 0.5599640192600841,
+      "quant": 0.1277189288155567,
+      "norm": 0.033557869434797105,
+      "softmax": 0.8019201535285791,
+      "act": 0.0443457786060808
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "prefill 20 tokens",
+    "dataset": "qwen35_prefill20.json",
+    "train": true,
+    "measured_cycles": 177829486,
+    "predicted_cycles": 176528032.46511298,
+    "error_pct": -0.7318547470170467,
+    "class_error_pct": {
+      "overhead": -0.2209297173790703,
+      "gemv": -0.47156180092524647,
+      "elt": -0.6974518653414363,
+      "fdot_nt": -5.567450848518629,
+      "fdot_nn": -2.5143240283698964,
+      "rope": 1.578871471068255,
+      "quant": -0.012995792427594743,
+      "norm": 0.09962213313652324,
+      "softmax": -0.41796774064847275,
+      "act": 0.013391754951275203
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=16",
+    "dataset": "qwen35_baseline.json",
+    "train": false,
+    "measured_cycles": 13153116,
+    "predicted_cycles": 13163751.42342535,
+    "error_pct": 0.08085858457684836,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=64",
+    "dataset": "qwen35_baseline.json",
+    "train": false,
+    "measured_cycles": 13248548,
+    "predicted_cycles": 13275218.719912397,
+    "error_pct": 0.20131051276257583,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=128",
+    "dataset": "qwen35_baseline.json",
+    "train": false,
+    "measured_cycles": 13367808,
+    "predicted_cycles": 13423841.781895125,
+    "error_pct": 0.41916955940064504,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=192",
+    "dataset": "qwen35_baseline.json",
+    "train": false,
+    "measured_cycles": 13482844,
+    "predicted_cycles": 13572464.843877854,
+    "error_pct": 0.6647028169861846,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=250",
+    "dataset": "qwen35_baseline.json",
+    "train": false,
+    "measured_cycles": 13571736,
+    "predicted_cycles": 13683932.1403649,
+    "error_pct": 0.8266896759920872,
+    "class_error_pct": {}
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=16",
+    "dataset": "qwen35_repeat.json",
+    "train": false,
+    "measured_cycles": 13162898,
+    "predicted_cycles": 13163751.42342535,
+    "error_pct": 0.006483552674718673,
+    "class_error_pct": {
+      "overhead": 0.1278670957352679,
+      "gemv": 0.11508828711042085,
+      "elt": 0.15491632913298137,
+      "fdot_nt": -0.3510023403152207,
+      "fdot_nn": -1.8270408692005247,
+      "rope": -0.05965156186620302,
+      "quant": -0.12105120901182431,
+      "norm": -0.01825276396453246,
+      "softmax": -4.210677166456178,
+      "act": 0.025173614639473207
+    }
+  },
+  {
+    "model": "qwen3.5",
+    "label": "decode t=250",
+    "dataset": "qwen35_repeat.json",
+    "train": false,
+    "measured_cycles": 13579690,
+    "predicted_cycles": 13683932.1403649,
+    "error_pct": 0.7676326953332424,
+    "class_error_pct": {
+      "overhead": 0.03767410885584521,
+      "gemv": 0.12876554524385853,
+      "elt": 0.15237905383422845,
+      "fdot_nt": 5.245556011784824,
+      "fdot_nn": 8.027704435624505,
+      "rope": 0.3039000875995512,
+      "quant": 0.04888319982012668,
+      "norm": -0.03598379667291152,
+      "softmax": 0.6839950231114278,
+      "act": 0.01638882837733391
+    }
+  },
+  {
+    "model": "gemma3",
+    "label": "prefill 17 tokens",
+    "dataset": "gemma3_profile.json",
+    "train": false,
+    "measured_cycles": 68388833,
+    "predicted_cycles": 66434784.77266515,
+    "error_pct": -2.8572621312822344,
+    "class_error_pct": {}
+  },
+  {
+    "model": "gemma3",
+    "label": "decode t=16",
+    "dataset": "gemma3_profile.json",
+    "train": false,
+    "measured_cycles": 9385495,
+    "predicted_cycles": 8942541.006264536,
+    "error_pct": -4.7195592106273,
+    "class_error_pct": {}
+  },
+  {
+    "model": "gemma3",
+    "label": "decode t=64",
+    "dataset": "gemma3_profile.json",
+    "train": false,
+    "measured_cycles": 9586732,
+    "predicted_cycles": 9143571.858579988,
+    "error_pct": -4.622640347305129,
+    "class_error_pct": {}
+  },
+  {
+    "model": "gemma3",
+    "label": "decode t=128",
+    "dataset": "gemma3_profile.json",
+    "train": false,
+    "measured_cycles": 9844979,
+    "predicted_cycles": 9411612.99500059,
+    "error_pct": -4.401898724206632,
+    "class_error_pct": {}
+  },
+  {
+    "model": "gemma3",
+    "label": "decode t=192",
+    "dataset": "gemma3_profile.json",
+    "train": false,
+    "measured_cycles": 10100946,
+    "predicted_cycles": 9679654.131421193,
+    "error_pct": -4.170815966928309,
+    "class_error_pct": {}
+  },
+  {
+    "model": "gemma3",
+    "label": "decode t=250",
+    "dataset": "gemma3_profile.json",
+    "train": false,
+    "measured_cycles": 10336626,
+    "predicted_cycles": 9880684.983736645,
+    "error_pct": -4.410926894939937,
+    "class_error_pct": {}
+  }
+]

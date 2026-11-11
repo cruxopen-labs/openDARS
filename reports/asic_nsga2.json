@@ -1,0 +1,4439 @@
+{
+  "target": "asic",
+  "method": "nsga2",
+  "seed": 7,
+  "search_size": 128,
+  "position": 250,
+  "prefill_tokens": 20,
+  "objectives": [
+    "mean of six baseline-normalized latencies",
+    "area",
+    "power_w"
+  ],
+  "evaluated": 79,
+  "feasible": 79,
+  "pareto": [
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.5367562399999999,
+      "power_w": 0.43029174719999996,
+      "ppa": {
+        "area": 1.5367562399999999,
+        "area_mm2": 1.5367562399999999,
+        "power_w": 0.43029174719999996,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3351012666903117,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 184.3634204003893,
+        "qwen3.5/prefill": 1879.822506346877,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 280.8174333030517
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.5759562399999998,
+      "power_w": 0.44126774719999995,
+      "ppa": {
+        "area": 1.5759562399999998,
+        "area_mm2": 1.5759562399999998,
+        "power_w": 0.44126774719999995,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.2374759807763691,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1746.4929868055945,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 271.24994286974834
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.63787624,
+      "power_w": 0.4586053472,
+      "ppa": {
+        "area": 1.63787624,
+        "area_mm2": 1.63787624,
+        "power_w": 0.4586053472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0412381472661416,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 143.94514462332396,
+        "qwen3.5/prefill": 1732.1523389743722,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 253.07265883252305
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.6770762399999999,
+      "power_w": 0.4695813472,
+      "ppa": {
+        "area": 1.6770762399999999,
+        "area_mm2": 1.6770762399999999,
+        "power_w": 0.4695813472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9436128613521987,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 132.50728946827223,
+        "qwen3.5/prefill": 1598.82281943309,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 241.32538792994336
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.7402762399999998,
+      "power_w": 0.48727734719999993,
+      "ppa": {
+        "area": 1.7402762399999998,
+        "area_mm2": 1.7402762399999998,
+        "power_w": 0.48727734719999993,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.8793346777006231,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1367.5630115460856,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 223.61352828037806
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.8641188,
+      "power_w": 0.521953264,
+      "ppa": {
+        "area": 1.8641188,
+        "area_mm2": 1.8641188,
+        "power_w": 0.521953264,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.8598572193134313,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1161.263967155361,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 221.58003559673818
+    }
+  ],
+  "points": [
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.5367562399999999,
+      "power_w": 0.43029174719999996,
+      "ppa": {
+        "area": 1.5367562399999999,
+        "area_mm2": 1.5367562399999999,
+        "power_w": 0.43029174719999996,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 2.3400625499533736,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 1989.601547769674,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 3568.500397288349,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 2865.607003307352
+      },
+      "energy_mj_mean": 640.0408832402774
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.5367562399999999,
+      "power_w": 0.43029174719999996,
+      "ppa": {
+        "area": 1.5367562399999999,
+        "area_mm2": 1.5367562399999999,
+        "power_w": 0.43029174719999996,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.4212887225801794,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 774.9053002110754,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 2100.957840001011,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 1003.7189227783401
+      },
+      "energy_mj_mean": 314.15750040586397
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.5367562399999999,
+      "power_w": 0.43029174719999996,
+      "ppa": {
+        "area": 1.5367562399999999,
+        "area_mm2": 1.5367562399999999,
+        "power_w": 0.43029174719999996,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3485576310075977,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 1966.4631450544125,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 287.3415648694499
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.5367562399999999,
+      "power_w": 0.43029174719999996,
+      "ppa": {
+        "area": 1.5367562399999999,
+        "area_mm2": 1.5367562399999999,
+        "power_w": 0.43029174719999996,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3351012666903117,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 184.3634204003893,
+        "qwen3.5/prefill": 1879.822506346877,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 280.8174333030517
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.6747799200000002,
+      "power_w": 0.46893837760000007,
+      "ppa": {
+        "area": 1.6747799200000002,
+        "area_mm2": 1.6747799200000002,
+        "power_w": 0.46893837760000007,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3485576310075977,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 1966.4631450544125,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 313.1491322428157
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.6605987999999998,
+      "power_w": 0.464967664,
+      "ppa": {
+        "area": 1.6605987999999998,
+        "area_mm2": 1.6605987999999998,
+        "power_w": 0.464967664,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 2.3400625499533736,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 1989.601547769674,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 3568.500397288349,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 2865.607003307352
+      },
+      "energy_mj_mean": 691.619851603625
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.6605987999999998,
+      "power_w": 0.464967664,
+      "ppa": {
+        "area": 1.6605987999999998,
+        "area_mm2": 1.6605987999999998,
+        "power_w": 0.464967664,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.4212887225801794,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 774.9053002110754,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 2100.957840001011,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 1003.7189227783401
+      },
+      "energy_mj_mean": 339.47450780156083
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.6605987999999998,
+      "power_w": 0.464967664,
+      "ppa": {
+        "area": 1.6605987999999998,
+        "area_mm2": 1.6605987999999998,
+        "power_w": 0.464967664,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3229564637870947,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 184.3634204003893,
+        "qwen3.5/prefill": 1751.1886166759878,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 293.47923184042503
+    },
+    {
+      "genes": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.79862248,
+      "power_w": 0.5036142943999999,
+      "ppa": {
+        "area": 1.79862248,
+        "area_mm2": 1.79862248,
+        "power_w": 0.5036142943999999,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3485576310075977,
+      "latencies_ms": {
+        "qwen3/decode": 150.80457479318588,
+        "qwen3/prefill": 692.379991237147,
+        "qwen3.5/decode": 188.69545233576602,
+        "qwen3.5/prefill": 1966.4631450544125,
+        "gemma3/decode": 161.53876701051666,
+        "gemma3/prefill": 846.8167813975294
+      },
+      "energy_mj_mean": 336.3051241051547
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.5759562399999998,
+      "power_w": 0.44126774719999995,
+      "ppa": {
+        "area": 1.5759562399999998,
+        "area_mm2": 1.5759562399999998,
+        "power_w": 0.44126774719999995,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 2.2424372640394306,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 1953.493813449768,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 3435.170877747067,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 2852.081227959914
+      },
+      "energy_mj_mean": 639.6365631725873
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.5759562399999998,
+      "power_w": 0.44126774719999995,
+      "ppa": {
+        "area": 1.5759562399999998,
+        "area_mm2": 1.5759562399999998,
+        "power_w": 0.44126774719999995,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3236634366662368,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 738.797565891169,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1967.628320459729,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 990.1931474309022
+      },
+      "energy_mj_mean": 305.44045755586137
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.5759562399999998,
+      "power_w": 0.44126774719999995,
+      "ppa": {
+        "area": 1.5759562399999998,
+        "area_mm2": 1.5759562399999998,
+        "power_w": 0.44126774719999995,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.250932345093655,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1833.13362551313,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 277.94049377497595
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.5759562399999998,
+      "power_w": 0.44126774719999995,
+      "ppa": {
+        "area": 1.5759562399999998,
+        "area_mm2": 1.5759562399999998,
+        "power_w": 0.44126774719999995,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.2374759807763691,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1746.4929868055945,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 271.24994286974834
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.71397992,
+      "power_w": 0.4799143776,
+      "ppa": {
+        "area": 1.71397992,
+        "area_mm2": 1.71397992,
+        "power_w": 0.4799143776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 2.2424372640394306,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 1953.493813449768,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 3435.170877747067,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 2852.081227959914
+      },
+      "energy_mj_mean": 695.6565147872547
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.71397992,
+      "power_w": 0.4799143776,
+      "ppa": {
+        "area": 1.71397992,
+        "area_mm2": 1.71397992,
+        "power_w": 0.4799143776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3236634366662368,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 738.797565891169,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1967.628320459729,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 990.1931474309022
+      },
+      "energy_mj_mean": 332.1912104655639
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.71397992,
+      "power_w": 0.4799143776,
+      "ppa": {
+        "area": 1.71397992,
+        "area_mm2": 1.71397992,
+        "power_w": 0.4799143776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.250932345093655,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1833.13362551313,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 302.2827748600391
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.71397992,
+      "power_w": 0.4799143776,
+      "ppa": {
+        "area": 1.71397992,
+        "area_mm2": 1.71397992,
+        "power_w": 0.4799143776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.2374759807763691,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1746.4929868055945,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 295.0062594250053
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.6997988,
+      "power_w": 0.475943664,
+      "ppa": {
+        "area": 1.6997988,
+        "area_mm2": 1.6997988,
+        "power_w": 0.475943664,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 2.2424372640394306,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 1953.493813449768,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 3435.170877747067,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 2852.081227959914
+      },
+      "energy_mj_mean": 689.9007947815152
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.6997988,
+      "power_w": 0.475943664,
+      "ppa": {
+        "area": 1.6997988,
+        "area_mm2": 1.6997988,
+        "power_w": 0.475943664,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.218665625959009,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1547.2596912528404,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 276.7614670719242
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.83782248,
+      "power_w": 0.5145902944,
+      "ppa": {
+        "area": 1.83782248,
+        "area_mm2": 1.83782248,
+        "power_w": 0.5145902944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 2.2424372640394306,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 1953.493813449768,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 3435.170877747067,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 2852.081227959914
+      },
+      "energy_mj_mean": 745.9207463961825
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.83782248,
+      "power_w": 0.5145902944,
+      "ppa": {
+        "area": 1.83782248,
+        "area_mm2": 1.83782248,
+        "power_w": 0.5145902944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3236634366662368,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 738.797565891169,
+        "qwen3.5/decode": 177.2575971807143,
+        "qwen3.5/prefill": 1967.628320459729,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 990.1931474309022
+      },
+      "energy_mj_mean": 356.19348110684086
+    },
+    {
+      "genes": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.83782248,
+      "power_w": 0.5145902944,
+      "ppa": {
+        "area": 1.83782248,
+        "area_mm2": 1.83782248,
+        "power_w": 0.5145902944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.218665625959009,
+      "latencies_ms": {
+        "qwen3/decode": 126.73275191324831,
+        "qwen3/prefill": 656.2722569172407,
+        "qwen3.5/decode": 172.92556524533757,
+        "qwen3.5/prefill": 1547.2596912528404,
+        "gemma3/decode": 152.521583445558,
+        "gemma3/prefill": 833.2910060500914
+      },
+      "energy_mj_mean": 299.2345010377476
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.5999562399999998,
+      "power_w": 0.4479877472,
+      "ppa": {
+        "area": 1.5999562399999998,
+        "area_mm2": 1.5999562399999998,
+        "power_w": 0.4479877472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 2.269024927748434,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 1954.2743705676446,
+        "qwen3.5/decode": 174.96401358766175,
+        "qwen3.5/prefill": 3293.8716223262636,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 2817.7433717130107
+      },
+      "energy_mj_mean": 638.3106511332398
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.5999562399999998,
+      "power_w": 0.4479877472,
+      "ppa": {
+        "area": 1.5999562399999998,
+        "area_mm2": 1.5999562399999998,
+        "power_w": 0.4479877472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.277551265197379,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 657.1014617564306,
+        "qwen3.5/decode": 174.96401358766175,
+        "qwen3.5/prefill": 1691.88301781364,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 799.0078784896651
+      },
+      "energy_mj_mean": 271.1177176457904
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.5999562399999998,
+      "power_w": 0.4479877472,
+      "ppa": {
+        "area": 1.5999562399999998,
+        "area_mm2": 1.5999562399999998,
+        "power_w": 0.4479877472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.2708230830387361,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 657.1014617564306,
+        "qwen3.5/decode": 172.7979976199734,
+        "qwen3.5/prefill": 1648.5626984598723,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 799.0078784896651
+      },
+      "energy_mj_mean": 267.72149749761655
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.7379799200000001,
+      "power_w": 0.48663437760000006,
+      "ppa": {
+        "area": 1.7379799200000001,
+        "area_mm2": 1.7379799200000001,
+        "power_w": 0.48663437760000006,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.2708230830387361,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 657.1014617564306,
+        "qwen3.5/decode": 172.7979976199734,
+        "qwen3.5/prefill": 1648.5626984598723,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 799.0078784896651
+      },
+      "energy_mj_mean": 290.8170705988733
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.7237988,
+      "power_w": 0.48266366399999994,
+      "ppa": {
+        "area": 1.7237988,
+        "area_mm2": 1.7237988,
+        "power_w": 0.48266366399999994,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3502757764763356,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 739.6165291048193,
+        "qwen3.5/decode": 174.96401358766175,
+        "qwen3.5/prefill": 1826.367471134699,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 955.8984980417437
+      },
+      "energy_mj_mean": 322.1804342360024
+    },
+    {
+      "genes": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.86182248,
+      "power_w": 0.5213102944,
+      "ppa": {
+        "area": 1.86182248,
+        "area_mm2": 1.86182248,
+        "power_w": 0.5213102944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.3502757764763356,
+      "latencies_ms": {
+        "qwen3/decode": 149.0382159330844,
+        "qwen3/prefill": 739.6165291048193,
+        "qwen3.5/decode": 174.96401358766175,
+        "qwen3.5/prefill": 1826.367471134699,
+        "gemma3/decode": 159.14558543079957,
+        "gemma3/prefill": 955.8984980417437
+      },
+      "energy_mj_mean": 347.97725527871984
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.63915624,
+      "power_w": 0.4589637472,
+      "ppa": {
+        "area": 1.63915624,
+        "area_mm2": 1.63915624,
+        "power_w": 0.4589637472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.1799259792834362,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 163.52615843261003,
+        "qwen3.5/prefill": 1558.5534982723575,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 260.35868127968195
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.63915624,
+      "power_w": 0.4589637472,
+      "ppa": {
+        "area": 1.63915624,
+        "area_mm2": 1.63915624,
+        "power_w": 0.4589637472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.173197797124793,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 161.36014246492164,
+        "qwen3.5/prefill": 1515.23317891859,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 256.8792514620934
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.77717992,
+      "power_w": 0.4976103776,
+      "ppa": {
+        "area": 1.77717992,
+        "area_mm2": 1.77717992,
+        "power_w": 0.4976103776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.173197797124793,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 161.36014246492164,
+        "qwen3.5/prefill": 1515.23317891859,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 278.50953827504753
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.7629988,
+      "power_w": 0.49363966400000003,
+      "ppa": {
+        "area": 1.7629988,
+        "area_mm2": 1.7629988,
+        "power_w": 0.49363966400000003,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.1537203387376014,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 620.9937274365242,
+        "qwen3.5/decode": 161.36014246492164,
+        "qwen3.5/prefill": 1308.9341345278656,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 785.4821031422271
+      },
+      "energy_mj_mean": 259.3142552398027
+    },
+    {
+      "genes": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 64,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.90102248,
+      "power_w": 0.5322862944,
+      "ppa": {
+        "area": 1.90102248,
+        "area_mm2": 1.90102248,
+        "power_w": 0.5322862944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.2526504905623927,
+      "latencies_ms": {
+        "qwen3/decode": 124.96639305314683,
+        "qwen3/prefill": 703.5087947849129,
+        "qwen3.5/decode": 163.52615843261003,
+        "qwen3.5/prefill": 1693.0379515934167,
+        "gemma3/decode": 150.1284018658409,
+        "gemma3/prefill": 942.3727226943056
+      },
+      "energy_mj_mean": 335.1221655664009
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.63787624,
+      "power_w": 0.4586053472,
+      "ppa": {
+        "area": 1.63787624,
+        "area_mm2": 1.63787624,
+        "power_w": 0.4586053472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.6346830851992198,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 1348.895437896741,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 2760.134881747043,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 1791.3123311435213
+      },
+      "energy_mj_mean": 479.64104937660045
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.63787624,
+      "power_w": 0.4586053472,
+      "ppa": {
+        "area": 1.63787624,
+        "area_mm2": 1.63787624,
+        "power_w": 0.4586053472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.097625285913943,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 614.498475504008,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1898.6098441924123,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 734.8592337916518
+      },
+      "energy_mj_mean": 276.90881564300895
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.63787624,
+      "power_w": 0.4586053472,
+      "ppa": {
+        "area": 1.63787624,
+        "area_mm2": 1.63787624,
+        "power_w": 0.4586053472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0546945115834274,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1818.7929776819078,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 260.02608436684034
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.63787624,
+      "power_w": 0.4586053472,
+      "ppa": {
+        "area": 1.63787624,
+        "area_mm2": 1.63787624,
+        "power_w": 0.4586053472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0412381472661416,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 143.94514462332396,
+        "qwen3.5/prefill": 1732.1523389743722,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 253.07265883252305
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.77589992,
+      "power_w": 0.4972519776,
+      "ppa": {
+        "area": 1.77589992,
+        "area_mm2": 1.77589992,
+        "power_w": 0.4972519776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.6346830851992198,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 1348.895437896741,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 2760.134881747043,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 1791.3123311435213
+      },
+      "energy_mj_mean": 520.0603564629649
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.77589992,
+      "power_w": 0.4972519776,
+      "ppa": {
+        "area": 1.77589992,
+        "area_mm2": 1.77589992,
+        "power_w": 0.4972519776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.097625285913943,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 614.498475504008,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1898.6098441924123,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 734.8592337916518
+      },
+      "energy_mj_mean": 300.24389605145893
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.77589992,
+      "power_w": 0.4972519776,
+      "ppa": {
+        "area": 1.77589992,
+        "area_mm2": 1.77589992,
+        "power_w": 0.4972519776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0546945115834274,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1818.7929776819078,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 281.9384585644792
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.77589992,
+      "power_w": 0.4972519776,
+      "ppa": {
+        "area": 1.77589992,
+        "area_mm2": 1.77589992,
+        "power_w": 0.4972519776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0412381472661416,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 143.94514462332396,
+        "qwen3.5/prefill": 1732.1523389743722,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 274.39906850035567
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.7617187999999997,
+      "power_w": 0.49328126399999994,
+      "ppa": {
+        "area": 1.7617187999999997,
+        "area_mm2": 1.7617187999999997,
+        "power_w": 0.49328126399999994,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.097625285913943,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 614.498475504008,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1898.6098441924123,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 734.8592337916518
+      },
+      "energy_mj_mean": 297.8463540102535
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.7617187999999997,
+      "power_w": 0.49328126399999994,
+      "ppa": {
+        "area": 1.7617187999999997,
+        "area_mm2": 1.7617187999999997,
+        "power_w": 0.49328126399999994,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0546945115834274,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 1818.7929776819078,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 279.6870912050404
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.7617187999999997,
+      "power_w": 0.49328126399999994,
+      "ppa": {
+        "area": 1.7617187999999997,
+        "area_mm2": 1.7617187999999997,
+        "power_w": 0.49328126399999994,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0290933443629247,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 143.94514462332396,
+        "qwen3.5/prefill": 1603.5184493034833,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 261.6324575959931
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.89974248,
+      "power_w": 0.5319278944,
+      "ppa": {
+        "area": 1.89974248,
+        "area_mm2": 1.89974248,
+        "power_w": 0.5319278944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.6346830851992198,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 1348.895437896741,
+        "qwen3.5/decode": 148.27717655870072,
+        "qwen3.5/prefill": 2760.134881747043,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 1791.3123311435213
+      },
+      "energy_mj_mean": 556.3268178629329
+    },
+    {
+      "genes": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.89974248,
+      "power_w": 0.5319278944,
+      "ppa": {
+        "area": 1.89974248,
+        "area_mm2": 1.89974248,
+        "power_w": 0.5319278944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0290933443629247,
+      "latencies_ms": {
+        "qwen3/decode": 118.76926929953923,
+        "qwen3/prefill": 565.428446415504,
+        "qwen3.5/decode": 143.94514462332396,
+        "qwen3.5/prefill": 1603.5184493034833,
+        "gemma3/decode": 107.82403340232511,
+        "gemma3/prefill": 642.866917502981
+      },
+      "energy_mj_mean": 282.13032286532155
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.6770762399999999,
+      "power_w": 0.4695813472,
+      "ppa": {
+        "area": 1.6770762399999999,
+        "area_mm2": 1.6770762399999999,
+        "power_w": 0.4695813472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.537057799285277,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 1312.7877035768347,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 2626.805362205761,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 1777.7865557960831
+      },
+      "energy_mj_mean": 473.31633769578946
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.6770762399999999,
+      "power_w": 0.4695813472,
+      "ppa": {
+        "area": 1.6770762399999999,
+        "area_mm2": 1.6770762399999999,
+        "power_w": 0.4695813472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 578.3907411841017,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1765.2803246511298,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 721.3334584442139
+      },
+      "energy_mj_mean": 265.73202578420523
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.6770762399999999,
+      "power_w": 0.4695813472,
+      "ppa": {
+        "area": 1.6770762399999999,
+        "area_mm2": 1.6770762399999999,
+        "power_w": 0.4695813472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9570692256694846,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1685.4634581406256,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 248.4452328030901
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.6770762399999999,
+      "power_w": 0.4695813472,
+      "ppa": {
+        "area": 1.6770762399999999,
+        "area_mm2": 1.6770762399999999,
+        "power_w": 0.4695813472,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9436128613521987,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 132.50728946827223,
+        "qwen3.5/prefill": 1598.82281943309,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 241.32538792994336
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.8150999200000002,
+      "power_w": 0.5082279776,
+      "ppa": {
+        "area": 1.8150999200000002,
+        "area_mm2": 1.8150999200000002,
+        "power_w": 0.5082279776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 578.3907411841017,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1765.2803246511298,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 721.3334584442139
+      },
+      "energy_mj_mean": 287.6018199043526
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.8150999200000002,
+      "power_w": 0.5082279776,
+      "ppa": {
+        "area": 1.8150999200000002,
+        "area_mm2": 1.8150999200000002,
+        "power_w": 0.5082279776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9436128613521987,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 132.50728946827223,
+        "qwen3.5/prefill": 1598.82281943309,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 261.1865113094734
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.8009187999999998,
+      "power_w": 0.5042572639999999,
+      "ppa": {
+        "area": 1.8009187999999998,
+        "area_mm2": 1.8009187999999998,
+        "power_w": 0.5042572639999999,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 578.3907411841017,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1765.2803246511298,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 721.3334584442139
+      },
+      "energy_mj_mean": 285.3548273970299
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.8009187999999998,
+      "power_w": 0.5042572639999999,
+      "ppa": {
+        "area": 1.8009187999999998,
+        "area_mm2": 1.8009187999999998,
+        "power_w": 0.5042572639999999,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9570692256694846,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1685.4634581406256,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 266.7915028868703
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.8009187999999998,
+      "power_w": 0.5042572639999999,
+      "ppa": {
+        "area": 1.8009187999999998,
+        "area_mm2": 1.8009187999999998,
+        "power_w": 0.5042572639999999,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9248025065348386,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 132.50728946827223,
+        "qwen3.5/prefill": 1399.589523880336,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 242.40175846848646
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.93894248,
+      "power_w": 0.5429038944,
+      "ppa": {
+        "area": 1.93894248,
+        "area_mm2": 1.93894248,
+        "power_w": 0.5429038944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9570692256694846,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 136.839321403649,
+        "qwen3.5/prefill": 1685.4634581406256,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 287.23859079620667
+    },
+    {
+      "genes": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 4,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.93894248,
+      "power_w": 0.5429038944,
+      "ppa": {
+        "area": 1.93894248,
+        "area_mm2": 1.93894248,
+        "power_w": 0.5429038944,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9248025065348386,
+      "latencies_ms": {
+        "qwen3/decode": 94.69744641960166,
+        "qwen3/prefill": 529.3207120955976,
+        "qwen3.5/decode": 132.50728946827223,
+        "qwen3.5/prefill": 1399.589523880336,
+        "gemma3/decode": 98.80684983736646,
+        "gemma3/prefill": 629.341142155543
+      },
+      "energy_mj_mean": 260.979599258583
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.70107624,
+      "power_w": 0.47630134719999995,
+      "ppa": {
+        "area": 1.70107624,
+        "area_mm2": 1.70107624,
+        "power_w": 0.47630134719999995,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0266123398100986,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 579.2097043977519,
+        "qwen3.5/decode": 134.54573781059645,
+        "qwen3.5/prefill": 1624.0194753261,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 687.0388090550554
+      },
+      "energy_mj_mean": 257.77805893863496
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.70107624,
+      "power_w": 0.47630134719999995,
+      "ppa": {
+        "area": 1.70107624,
+        "area_mm2": 1.70107624,
+        "power_w": 0.47630134719999995,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9836881457732088,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 530.1499169347876,
+        "qwen3.5/decode": 134.54573781059645,
+        "qwen3.5/prefill": 1544.212850441135,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 595.0580145951166
+      },
+      "energy_mj_mean": 240.24642191731087
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.70107624,
+      "power_w": 0.47630134719999995,
+      "ppa": {
+        "area": 1.70107624,
+        "area_mm2": 1.70107624,
+        "power_w": 0.47630134719999995,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9769599636145658,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 530.1499169347876,
+        "qwen3.5/decode": 132.37972184290805,
+        "qwen3.5/prefill": 1500.8925310873676,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 595.0580145951166
+      },
+      "energy_mj_mean": 236.6355547851775
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.83909992,
+      "power_w": 0.5149479776000001,
+      "ppa": {
+        "area": 1.83909992,
+        "area_mm2": 1.83909992,
+        "power_w": 0.5149479776000001,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.0266123398100986,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 579.2097043977519,
+        "qwen3.5/decode": 134.54573781059645,
+        "qwen3.5/prefill": 1624.0194753261,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 687.0388090550554
+      },
+      "energy_mj_mean": 278.69392119179736
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.83909992,
+      "power_w": 0.5149479776000001,
+      "ppa": {
+        "area": 1.83909992,
+        "area_mm2": 1.83909992,
+        "power_w": 0.5149479776000001,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9769599636145658,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 530.1499169347876,
+        "qwen3.5/decode": 132.37972184290805,
+        "qwen3.5/prefill": 1500.8925310873676,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 595.0580145951166
+      },
+      "energy_mj_mean": 255.83593471070745
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.8249187999999998,
+      "power_w": 0.510977264,
+      "ppa": {
+        "area": 1.8249187999999998,
+        "area_mm2": 1.8249187999999998,
+        "power_w": 0.510977264,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.5636454629942804,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 1313.5682606947112,
+        "qwen3.5/decode": 134.54573781059645,
+        "qwen3.5/prefill": 2485.506106784958,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 1743.4486995491798
+      },
+      "energy_mj_mean": 502.41861344974933
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.8249187999999998,
+      "power_w": 0.510977264,
+      "ppa": {
+        "area": 1.8249187999999998,
+        "area_mm2": 1.8249187999999998,
+        "power_w": 0.510977264,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9836881457732088,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 530.1499169347876,
+        "qwen3.5/decode": 134.54573781059645,
+        "qwen3.5/prefill": 1544.212850441135,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 595.0580145951166
+      },
+      "energy_mj_mean": 257.7369559812514
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.8249187999999998,
+      "power_w": 0.510977264,
+      "ppa": {
+        "area": 1.8249187999999998,
+        "area_mm2": 1.8249187999999998,
+        "power_w": 0.510977264,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9641480571415171,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 530.1499169347876,
+        "qwen3.5/decode": 132.37972184290805,
+        "qwen3.5/prefill": 1365.1928925785082,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 595.0580145951166
+      },
+      "energy_mj_mean": 242.3066371174198
+    },
+    {
+      "genes": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 8,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.96294248,
+      "power_w": 0.5496238943999999,
+      "ppa": {
+        "area": 1.96294248,
+        "area_mm2": 1.96294248,
+        "power_w": 0.5496238943999999,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9641480571415171,
+      "latencies_ms": {
+        "qwen3/decode": 117.00291043943774,
+        "qwen3/prefill": 530.1499169347876,
+        "qwen3.5/decode": 132.37972184290805,
+        "qwen3.5/prefill": 1365.1928925785082,
+        "gemma3/decode": 105.43085182260802,
+        "gemma3/prefill": 595.0580145951166
+      },
+      "energy_mj_mean": 260.6329614138054
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.7402762399999998,
+      "power_w": 0.48727734719999993,
+      "ppa": {
+        "area": 1.7402762399999998,
+        "area_mm2": 1.7402762399999998,
+        "power_w": 0.48727734719999993,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.4660201770803374,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 1277.4605263748049,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 2352.1765872436754,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 1729.9229242017416
+      },
+      "energy_mj_mean": 460.6405483647973
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.7402762399999998,
+      "power_w": 0.48727734719999993,
+      "ppa": {
+        "area": 1.7402762399999998,
+        "area_mm2": 1.7402762399999998,
+        "power_w": 0.48727734719999993,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9289870538961559,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 543.1019700778455,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1490.689955784818,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 673.5130337076174
+      },
+      "energy_mj_mean": 245.24324526023747
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.7402762399999998,
+      "power_w": 0.48727734719999993,
+      "ppa": {
+        "area": 1.7402762399999998,
+        "area_mm2": 1.7402762399999998,
+        "power_w": 0.48727734719999993,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.886062859859266,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1410.883330899853,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 227.3076050819262
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.7402762399999998,
+      "power_w": 0.48727734719999993,
+      "ppa": {
+        "area": 1.7402762399999998,
+        "area_mm2": 1.7402762399999998,
+        "power_w": 0.48727734719999993,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.8793346777006231,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1367.5630115460856,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 223.61352828037806
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.87829992,
+      "power_w": 0.5259239776,
+      "ppa": {
+        "area": 1.87829992,
+        "area_mm2": 1.87829992,
+        "power_w": 0.5259239776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9289870538961559,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 543.1019700778455,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1490.689955784818,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 673.5130337076174
+      },
+      "energy_mj_mean": 264.6938212250973
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.87829992,
+      "power_w": 0.5259239776,
+      "ppa": {
+        "area": 1.87829992,
+        "area_mm2": 1.87829992,
+        "power_w": 0.5259239776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.886062859859266,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1410.883330899853,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 245.33568098405664
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 4,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.87829992,
+      "power_w": 0.5259239776,
+      "ppa": {
+        "area": 1.87829992,
+        "area_mm2": 1.87829992,
+        "power_w": 0.5259239776,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.8793346777006231,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1367.5630115460856,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 241.34862191760539
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 1,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.8641188,
+      "power_w": 0.521953264,
+      "ppa": {
+        "area": 1.8641188,
+        "area_mm2": 1.8641188,
+        "power_w": 0.521953264,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 1.4660201770803374,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 1277.4605263748049,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 2352.1765872436754,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 1729.9229242017416
+      },
+      "energy_mj_mean": 493.42092164007715
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": false
+      },
+      "feasible": true,
+      "area": 1.8641188,
+      "power_w": 0.521953264,
+      "ppa": {
+        "area": 1.8641188,
+        "area_mm2": 1.8641188,
+        "power_w": 0.521953264,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.9289870538961559,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 543.1019700778455,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1490.689955784818,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 673.5130337076174
+      },
+      "energy_mj_mean": 262.6953891312219
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.8641188,
+      "power_w": 0.521953264,
+      "ppa": {
+        "area": 1.8641188,
+        "area_mm2": 1.8641188,
+        "power_w": 0.521953264,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.886062859859266,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1410.883330899853,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 243.48340239144687
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 0,
+        "mxu_cols": 0
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 1.8641188,
+      "power_w": 0.521953264,
+      "ppa": {
+        "area": 1.8641188,
+        "area_mm2": 1.8641188,
+        "power_w": 0.521953264,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.8598572193134313,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1161.263967155361,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 221.58003559673818
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": false,
+        "gqa_reuse": false,
+        "delta_block": false,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 2.00214248,
+      "power_w": 0.5605998943999999,
+      "ppa": {
+        "area": 2.00214248,
+        "area_mm2": 2.00214248,
+        "power_w": 0.5605998943999999,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.886062859859266,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 123.10788265554471,
+        "qwen3.5/prefill": 1410.883330899853,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 261.5114782935773
+    },
+    {
+      "genes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "hardware": {
+        "mhz": 100,
+        "gemv_bytes": 128,
+        "gemv_batch": 4,
+        "vpu_lanes": 8,
+        "fdot_lanes": 16,
+        "sfu_lanes": 1,
+        "read_gbs": 12.79,
+        "write_bytes": 16,
+        "hold_kib": 80,
+        "outstanding": 128,
+        "queue_depth": 32,
+        "mxu_rows": 8,
+        "mxu_cols": 2
+      },
+      "mapping": {
+        "chunk": 4,
+        "fusion": true,
+        "gqa_reuse": true,
+        "delta_block": true,
+        "skip_head": true
+      },
+      "feasible": true,
+      "area": 2.00214248,
+      "power_w": 0.5605998943999999,
+      "ppa": {
+        "area": 2.00214248,
+        "area_mm2": 2.00214248,
+        "power_w": 0.5605998943999999,
+        "feasible": true,
+        "status": "UNCALIBRATED illustrative 28nm-equivalent ASIC estimate"
+      },
+      "latency_ratio": 0.8598572193134313,
+      "latencies_ms": {
+        "qwen3/decode": 92.93108755950017,
+        "qwen3/prefill": 494.0421826148812,
+        "qwen3.5/decode": 120.94186668785633,
+        "qwen3.5/prefill": 1161.263967155361,
+        "gemma3/decode": 96.41366825764935,
+        "gemma3/prefill": 581.5322392476787
+      },
+      "energy_mj_mean": 237.98633541389188
+    }
+  ]
+}

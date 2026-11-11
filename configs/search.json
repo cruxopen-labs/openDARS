@@ -1,0 +1,15 @@
+{
+  "hardware": {
+    "gemv_bytes": [64, 128],
+    "vpu_lanes": [4, 8],
+    "fdot_lanes": [8, 16],
+    "hold_kib": [4, 80],
+    "mxu": [[0, 0], [8, 2]]
+  },
+  "mappings": [
+    {"chunk": 1},
+    {"chunk": 4},
+    {"chunk": 4, "skip_head": true},
+    {"chunk": 4, "skip_head": true, "fusion": true, "gqa_reuse": true, "delta_block": true}
+  ]
+}
