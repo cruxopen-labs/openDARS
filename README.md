@@ -1,5 +1,8 @@
 # openDARS
 
+[![CI](https://github.com/cruxopen-labs/openDARS/actions/workflows/ci.yml/badge.svg)](https://github.com/cruxopen-labs/openDARS/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
 Design-space exploration for [openTARS](https://github.com/cruxopen-labs/openTARS).
 HF configs → ordered W8A8 workload → parameterized hardware/mapping model →
 calibrated core-cycle predictions → PPA estimates → Pareto frontier.
@@ -31,9 +34,13 @@ JSON results retain every candidate, per-model decode/prefill latency, calibrati
 errors and mapping assumptions. Plots show the three-objective nondominated set.
 `search --position 250 --tokens 20` controls the workload; `report` uses these defaults.
 
+The checked-in `reports/` tree is reproducible on the recorded environment below: a full
+`dars report` run regenerates every JSON, Markdown and PNG file byte-for-byte. CI runs the
+test suite on Python 3.10-3.13 and separately builds and installs the wheel.
+
 ### Validated snapshot
 
-- 19 tests passed, including all 12 openTARS queue comparisons and Block DeltaNet algebra.
+- 21 tests passed, including all 12 openTARS queue comparisons and Block DeltaNet algebra.
 - Qwen training total-cycle MAPE **0.30%**, worst **0.74%**.
 - Gemma held-out MAPE **4.20%**, worst **4.72%**; excluded/repeat/baseline worst **6.34%**.
 - Training per-class worst error **8.02%**, reported separately from total error.
@@ -75,7 +82,10 @@ Core busy time is not end-to-end chat latency. Training fit is not validation:
 the report gives both and retains the excluded outlier. Good baseline cycle accuracy
 does not validate new hardware or mapping speedups. PPA slopes, clocks and MXUs need
 RTL synthesis; power needs board measurement. ASIC absolute numbers are illustrative
-28nm-equivalent assumptions, not technology-library estimates.
+28nm-equivalent assumptions, not technology-library estimates. See the
+[cycle-accurate modeling assessment](docs/cycle_accuracy_assessment.md) before
+investing in a higher-fidelity simulator: the current frontier is limited more by
+PPA priors than by cycle ordering.
 
 The default objectives minimize equal-weight mean normalized latency across six
 workloads (three models × decode/prefill), area and power. Individual latencies
@@ -100,6 +110,8 @@ concurrent descriptor execution.
 | `dars/report.py`, `cli.py` | Reproducible outputs and commands |
 | `configs/` | Model snapshots and discrete search space |
 | `data/measurements/` | Preserved FPGA evidence |
+| `docs/` | Cycle-accurate modeling assessment and design notes |
+| `tools/` | Oracle regeneration and decision-margin analysis |
 | `tests/fixtures/` | Independent openTARS lowering oracle |
 
 To regenerate the oracle, in openTARS's environment:
@@ -112,3 +124,14 @@ python tools/dump_opentars_queue.py --opentars /path/to/openTARS \
 
 This is intentionally heavier than ordinary tests: it constructs random weights
 with real shapes. Normal tests consume the checked-in fixture without openTARS.
+
+## Contributing
+
+Run `python -m pytest -q` before opening a pull request; CI covers Python 3.10-3.13.
+Report numbers must stay reproducible: regenerate `reports/` with `dars report` when
+changing the model or the preserved measurements.
+
+## License
+
+Apache-2.0; see [LICENSE](LICENSE). Model configs and measurement snapshots retain their
+upstream terms, documented in [data/SOURCES.md](data/SOURCES.md).

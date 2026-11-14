@@ -9,11 +9,57 @@ import matplotlib.pyplot as plt
 from .hardware import BASE, ppa
 from .performance import Mapping, Performance, samples
 from .search import Space, Evaluator, grid, nsga2, pareto
-from .workload import MODELS, config, workload
+from .workload import MODELS, ROOT, config, workload
+
+MEASUREMENTS = ROOT / "data" / "measurements"
 
 
 def write_json(path, value):
     path.write_text(json.dumps(value, indent=2, allow_nan=False) + "\n")
+
+
+def _measurement(stem, label):
+    data = json.loads((MEASUREMENTS / f"{stem}.json").read_text())
+    try:
+        return next(sample for sample in data["samples"] if sample["label"] == label)
+    except StopIteration:
+        raise ValueError(f"missing measurement sample: {stem}: {label}") from None
+
+
+def _operator(sample, name):
+    try:
+        return next(op for op in sample["operators"] if op["name"] == name)
+    except StopIteration:
+        raise ValueError(f"missing operator {name} in {sample['label']}") from None
+
+
+def _pct(sample, *names):
+    return sum(_operator(sample, name)["pct"] for name in names)
+
+
+def observed_bottlenecks():
+    """Narrative derived from the preserved measurements, not hand-copied numbers."""
+    q3_16 = _measurement("qwen3_profile", "decode t=16")
+    q3_250 = _measurement("qwen3_profile", "decode t=250")
+    q35_16 = _measurement("qwen35_profile", "decode t=16")
+    q3_p20 = _measurement("qwen3_prefill20", "prefill 20 tokens")
+    q35_p20 = _measurement("qwen35_prefill20", "prefill 20 tokens")
+    prefill_writes = [_operator(sample, "gemv")["waits_pct"]["wr_wait"]
+                      for sample in (q3_p20, q35_p20)]
+    fdot_nn_wait = _operator(q3_250, "fdot_nn")["waits_pct"]["rd_wait"]
+    return [
+        f"- Qwen3 t=16: GEMV {_pct(q3_16, 'gemv'):.1f}%; "
+        f"t=250: GEMV {_pct(q3_250, 'gemv'):.1f}%, "
+        f"FDOT {_pct(q3_250, 'fdot_nt', 'fdot_nn'):.1f}%. "
+        "Long-context attention/request-path work matters more than increasing the INT8 MAC count.",
+        f"- Qwen3.5 t=16: GEMV {_pct(q35_16, 'gemv'):.1f}%, ELT {_pct(q35_16, 'elt'):.1f}%; "
+        f"prefill20: ELT {_pct(q35_p20, 'elt'):.1f}%. "
+        "DeltaNet state updates are scalar/broadcast-heavy; MXU alone cannot fix them.",
+        f"- GEMV prefill write-request waits: {prefill_writes[0]:.1f}% / {prefill_writes[1]:.1f}% "
+        "of GEMV cycles. Prioritize epilogue/output acceptance and buffers, not only DDR read width.",
+        f"- Qwen3 t=250 FDOT NN read-request wait: {fdot_nn_wait:.1f}% of that class. "
+        "Wait counters overlap and are never added together.",
+    ]
 
 
 def analysis(perf):
@@ -108,14 +154,7 @@ def generate(out, include_search=True):
         lines.append(f"| {r['dataset']} | {r['label']} | {r['measured_cycles']/1e5:.3f} | "
                      f"{r['predicted_cycles']/1e5:.3f} | {r['error_pct']:+.2f}% |")
     lines += ["", "## Observed bottlenecks (not inferred utilization)", "",
-              "- Qwen3 t=16: GEMV 75.9%; t=250: GEMV 53.5%, FDOT 31.8%. "
-              "Long-context attention/request-path work matters more than increasing the INT8 MAC count.",
-              "- Qwen3.5 t=16: GEMV 48.6%, ELT 36.3%; prefill20: ELT 53.9%. "
-              "DeltaNet state updates are scalar/broadcast-heavy; MXU alone cannot fix them.",
-              "- GEMV prefill write-request waits: 36.7% / 38.0% of GEMV cycles. "
-              "Prioritize epilogue/output acceptance and buffers, not only DDR read width.",
-              "- Qwen3 t=250 FDOT NN read-request wait: 57.9% of that class. "
-              "Wait counters overlap and are never added together.", "",
+              *observed_bottlenecks(), "",
               "## Baseline predictions and mapping alternatives", "",
               "Decode uses t=250; prefill uses 20 tokens. Speedups below are model predictions. "
               "Chunking/head skipping change descriptor workloads; fusion/GQA/resident DeltaNet "
